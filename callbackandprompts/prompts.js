@@ -1,19 +1,14 @@
 const myAdvice = new Promise((resolve, reject) => {
-    //logic
-        let result = Math.random();
-        if (result > 0.5) {
-            resolve("you get advice");
-        } else {
-            reject("try again");
-        }
-    });
-
-myAdvice
-.then((message) => {
-    console.log(message);
-    //logic
+    let result = 1 + 1
+    if (result == 2){
+        resolve("good work")
+    } else {
+        reject("you have failed")
+    }
 })
-.catch((error) => {
-    console.log(error);
-    //logic
+
+myAdvice.then((message) => {
+    console.log("you did a " + message)
+}).catch((message) => {
+    console.log("sorry but " + message)
 });
